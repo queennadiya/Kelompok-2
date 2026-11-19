@@ -56,7 +56,7 @@ Koin dihitung saat hari berganti:
 | Hari berakhir dengan... | Hasil |
 |---|---|
 | Pengeluaran **di bawah** jatah | +10 koin, streak +1 |
-| Pengeluaran **tepat** sebesar jatah | tanpa koin, streak +1 |
+| Pengeluaran **sesuai** dengan jatah | tanpa koin, streak +1 |
 | Pengeluaran **melebihi** jatah | tanpa koin, streak jadi 0 |
 
 Koin tidak pernah berkurang karena boros.
