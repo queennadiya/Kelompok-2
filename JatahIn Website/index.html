@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MoneyPilot — Small Step, Big Habits</title>
+  <title>JatahIn — Small Step, Big Habits</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -11,7 +11,7 @@
 </head>
 <body>
   <!-- AUTH VIEW (LOGIN & REGISTER) -->
-  <div id="auth-view" class="auth-wrapper hidden">
+  <div id="auth-view" class="auth-wrapper">
     <div class="auth-card">
       <div class="auth-brand">
         <div class="brand-circle">
@@ -26,7 +26,7 @@
             <path d="M47 13L50 10M51 17L55 16" stroke="#BBE11A" stroke-width="2.5" stroke-linecap="round"/>
           </svg>
         </div>
-        <h1 class="auth-brand-title" id="auth-brand-name">MoneyPilot</h1>
+        <h1 class="auth-brand-title" id="auth-brand-name">JatahIn</h1>
         <p class="auth-brand-sub">SMALL STEP, BIG HABITS</p>
       </div>
 
@@ -35,26 +35,15 @@
         <h2 class="auth-heading">Masuk</h2>
         <div class="form-group">
           <label for="login-email">Email</label>
-          <input type="email" id="login-email" class="auth-input" placeholder="dinda@gmail.com" value="dinda@gmail.com" required />
+          <input type="email" id="login-email" class="auth-input" placeholder="dinda@gmail.com" required />
         </div>
         <div class="form-group">
           <label for="login-pass">Password</label>
-          <input type="password" id="login-pass" class="auth-input" placeholder="********" value="********" required />
+          <input type="password" id="login-pass" class="auth-input" placeholder="********" required />
         </div>
+        <p id="login-error" class="auth-error hidden"></p>
         <button type="submit" class="btn-auth-submit">Masuk</button>
 
-        <div class="auth-divider"><span>Atau</span></div>
-        <div class="social-row">
-          <button type="button" class="social-btn" onclick="enterDashboard()" title="Facebook">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="#1877F2"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/></svg>
-          </button>
-          <button type="button" class="social-btn" onclick="enterDashboard()" title="Google">
-            <svg width="20" height="20" viewBox="0 0 24 24"><path fill="#EA4335" d="M12 5c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 1.19 14.97 0 12 0 7.31 0 3.26 2.7 1.29 6.6l3.66 2.84C5.82 6.86 8.66 5 12 5z"/><path fill="#4285F4" d="M23.49 12.27c0-.79-.07-1.54-.19-2.27H12v4.51h6.47c-.29 1.48-1.14 2.73-2.4 3.58v3h3.86c2.26-2.09 3.56-5.17 3.56-8.82z"/><path fill="#FBBC05" d="M4.95 14.56c-.22-.66-.35-1.36-.35-2.06s.13-1.4.35-2.06V7.6H1.29C.47 9.23 0 11.06 0 13s.47 3.77 1.29 5.4l3.66-2.84z"/><path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.86-3c-1.08.72-2.45 1.16-4.07 1.16-3.34 0-6.18-1.86-7.05-4.44H1.29v2.84C3.26 21.3 7.31 24 12 24z"/></svg>
-          </button>
-          <button type="button" class="social-btn" onclick="enterDashboard()" title="WhatsApp">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="#25D366"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm5.82 14.01c-.24.68-1.41 1.3-1.96 1.38-.52.08-1.18.11-1.9-.12-.44-.14-1-.33-1.72-.64-3.03-1.31-5.01-4.36-5.16-4.56-.15-.2-1.23-1.64-1.23-3.13 0-1.49.78-2.22 1.06-2.52.28-.3.6-.38.8-.38.2 0 .4 0 .58.01.19.01.44-.07.69.53.25.6.85 2.08.93 2.23.08.15.13.33.03.53-.1.2-.15.33-.3.5-.15.18-.32.4-.45.53-.15.15-.31.31-.13.61.18.3.79 1.3 1.7 2.11 1.17 1.04 2.15 1.36 2.45 1.51.3.15.48.13.66-.08.18-.2.76-.88.96-1.18.2-.3.4-.25.68-.15.28.1 1.76.83 2.06.98.3.15.5.23.58.35.07.13.07.73-.17 1.41z"/></svg>
-          </button>
-        </div>
         <p class="auth-switch">Belum mempunyai akun? <a href="#" id="to-register">Daftar</a></p>
       </form>
 
@@ -81,6 +70,7 @@
           <label for="reg-confirm">Konfirmasi Password</label>
           <input type="password" id="reg-confirm" class="auth-input" placeholder="********" required />
         </div>
+        <p id="reg-error" class="auth-error hidden"></p>
         <button type="submit" class="btn-auth-submit">Daftar</button>
         <p class="auth-switch">Sudah punya akun? <a href="#" id="to-login">Masuk</a></p>
       </form>
@@ -88,7 +78,7 @@
   </div>
 
   <!-- MAIN APP SHELL -->
-  <div id="app-shell" class="app-shell">
+  <div id="app-shell" class="app-shell hidden">
     <!-- SIDEBAR -->
     <aside class="sidebar">
       <div class="sidebar-top">
@@ -104,7 +94,7 @@
             </svg>
           </div>
           <div>
-            <div class="logo-title">MoneyPilot</div>
+            <div class="logo-title">JatahIn</div>
             <div class="logo-sub">SMALL STEP, BIG HABITS</div>
           </div>
         </div>
@@ -113,10 +103,6 @@
           <button class="nav-item active" data-page="beranda" onclick="navigateTo('beranda')">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/></svg>
             <span>Beranda</span>
-          </button>
-          <button class="nav-item" data-page="uang-saku" onclick="navigateTo('uang-saku')">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>
-            <span>Input Uang Saku Bulanan</span>
           </button>
           <button class="nav-item" data-page="simulasi" onclick="navigateTo('simulasi')">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
@@ -151,12 +137,12 @@
           </div>
           <div class="profile-info">
             <div class="profile-name" id="sidebar-user-name">Dinda</div>
-            <div class="profile-role">Mahasiswi Kos</div>
+            <div class="profile-role">Mahasiswa</div>
           </div>
           <button class="profile-dots" aria-label="Menu Akun">⋮</button>
           <div id="profile-dropdown" class="profile-dropdown hidden">
-            <button type="button" onclick="openAuth('login')">Halaman Masuk (Login)</button>
-            <button type="button" onclick="openAuth('register')">Halaman Daftar</button>
+            <button type="button" onclick="navigateTo('profil')">Profil Saya</button>
+            <button type="button" onclick="logout()">Keluar</button>
             <button type="button" onclick="resetDemoData()">Reset Data Demo</button>
           </div>
         </div>
@@ -171,7 +157,7 @@
           <button class="mobile-menu-btn" onclick="toggleSidebar()">☰</button>
           <div class="date-pill">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#4891E7" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-            <span>Oktober 2024</span>
+            <span id="top-month"></span>
           </div>
           <div class="status-badge-tertiary" id="top-status-badge">
             <span class="dot-dark"></span> STATUS: AMAN
@@ -179,6 +165,11 @@
         </div>
 
         <div class="topbar-right">
+          <div class="skip-day-pill" title="Lompat hari untuk simulasi">
+            <span class="skip-day-label" id="sim-offset-label">Simulasi</span>
+            <button type="button" class="skip-day-btn" onclick="skipDays(1)">+1 hari</button>
+            <button type="button" class="skip-day-btn" onclick="skipDays(7)">+7 hari</button>
+          </div>
           <div class="topbar-nav-pill" title="Navigasi Cepat">
             <button class="tb-pill-btn active" onclick="navigateTo('beranda')" title="Beranda">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
@@ -190,7 +181,7 @@
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
             </button>
           </div>
-          <div class="user-photo-avatar" onclick="navigateTo('avatar')" title="Edit Avatar Beruang">
+          <div class="user-photo-avatar" onclick="navigateTo('profil')" title="Profil">
             <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' fill='%23FFE4D6'/><circle cx='32' cy='25' r='12' fill='%234A2E2B'/><circle cx='32' cy='27' r='10' fill='%23F7C6A3'/><path d='M16 58c0-10 7-16 16-16s16 6 16 16' fill='%23042C8F'/></svg>" alt="Dinda" />
           </div>
         </div>
@@ -202,20 +193,24 @@
       <section id="page-beranda" class="page-view active">
         <div class="page-header-row">
           <div>
-            <div class="meta-subtitle">Kamis, 10 Oktober 2024 • Sisa 21 Hari</div>
+            <div class="meta-subtitle" id="meta-date"></div>
             <h1 class="page-title">Halo, <span id="hero-user-name">Dinda</span>! 👋</h1>
             <p class="page-desc">Fokus kuliahmu, biar autopilot yang jaga dompetmu tanpa rasa was-was.</p>
           </div>
           <div class="header-actions">
             <button class="btn btn-primary" onclick="navigateTo('uang-saku')">
-              <span class="btn-icon-circle">+</span> Catat Pemasukan
+              <span class="btn-icon-circle">+</span> Input Pemasukan
             </button>
             <button class="btn btn-secondary-blue" onclick="navigateTo('catat-pengeluaran')">
-              <span class="btn-icon-circle">−</span> Catat Pengeluaran
+              <span class="btn-icon-circle">−</span> Input Pengeluaran
             </button>
           </div>
         </div>
 
+        <div id="no-income-note" class="card card-padded hidden" style="margin-bottom:16px">
+          <strong>Belum ada pemasukan bulan ini.</strong> Isi pemasukan dulu agar jatah harianmu bisa dihitung.
+          <button type="button" class="btn btn-primary" style="margin-left:12px" onclick="navigateTo('uang-saku')">Input Pemasukan</button>
+        </div>
         <!-- TOP 3 METRIC & BEAR CARDS -->
         <div class="beranda-top-grid">
           <!-- Card 1: Jatah Uang Hari Ini -->
@@ -251,13 +246,13 @@
               </div>
               <div class="stat-big-value" id="free-balance-val">Rp 1.200.000</div>
               <p class="stat-helper-text">
-                Dari uang saku <span id="total-allowance-text">Rp 1.500.000</span>. Pos wajib kos <span id="locked-kos-text">Rp 300.000</span> sudah dikunci &amp; disisihkan.
+                Dari pemasukan bulan ini <span id="total-allowance-text">Rp 1.500.000</span>. Pos wajib kos <span id="locked-kos-text">Rp 300.000</span> sudah dikunci &amp; disisihkan.
               </p>
             </div>
             <div class="stat-footer-split">
               <div class="split-item">
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#4891E7" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-                <span>Aman hingga 31 Oktober</span>
+                <span id="safe-until"></span>
               </div>
               <div class="split-item text-primary fw-700" id="safe-daily-rate">Rp 57.142 / hari</div>
             </div>
@@ -267,7 +262,7 @@
           <div class="card card-padded bear-streak-card">
             <div class="streak-header">
               <div class="streak-left">
-                <span class="streak-badge">3</span>
+                <span class="streak-badge" id="streak-val">0</span>
                 <span class="streak-title">STREAK!</span>
               </div>
               <div class="coin-pill">
@@ -314,7 +309,7 @@
             <div class="quick-shortcut-wrap">
               <div class="shortcut-eyebrow">SHORTCUT CEPAT CATAT NOMINAL</div>
               <div class="shortcut-grid">
-                <button type="button" class="shortcut-btn" onclick="quickAddExpense('Camilan / Kopi', 10000, 'Jajan & Reward')">
+                <button type="button" class="shortcut-btn" onclick="quickAddExpense('Camilan / Kopi', 10000, 'Jajan/Reward')">
                   <strong>+ Rp 10rb</strong>
                   <span>Camilan / Kopi</span>
                 </button>
@@ -334,35 +329,13 @@
             </div>
           </div>
 
-          <!-- Right: Tagihan Bulanan Terdekat -->
-          <div class="card card-padded flex-between-col">
-            <div>
-              <div class="section-head-row">
-                <div class="section-title-with-icon">
-                  <div class="icon-box-soft">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#042C8F" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
-                  </div>
-                  <h3>Tagihan Bulanan Terdekat</h3>
-                </div>
-                <span class="pill-danger-soft">4 Hari Lagi</span>
-              </div>
-
-              <div class="bill-highlight-box">
-                <div class="bill-icon-circle">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#042C8F" stroke-width="2"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg>
-                </div>
-                <div class="bill-info">
-                  <div class="bill-title">Patungan Galon &amp; WiFi</div>
-                  <div class="bill-due">Jatuh tempo: 14 Oktober</div>
-                </div>
-                <div class="bill-amount">Rp 35.000</div>
-              </div>
+          <!-- Right: Tagihan Bulanan Belum Dibayar -->
+          <div class="card card-padded">
+            <div class="section-head-row">
+              <div class="section-title-with-icon"><div class="icon-box-soft">🔔</div><h3>Tagihan Bulanan Belum Dibayar</h3></div>
+              <span class="pill-danger-soft" id="bill-count"></span>
             </div>
-
-            <div class="bill-footer-row">
-              <span class="bill-vault-note" id="bill-vault-status">Dana sudah disisihkan di brankas wajib.</span>
-              <button type="button" class="btn btn-outlined-sm" id="btn-ready-pay" onclick="markBillReady()">Tandai Siap Bayar</button>
-            </div>
+            <div id="bill-list" class="today-list"></div>
           </div>
         </div>
       </section>
@@ -373,7 +346,7 @@
       <section id="page-catat-pengeluaran" class="page-view">
         <div class="page-header-row">
           <div>
-            <h1 class="page-title">Catat Pengeluaran</h1>
+            <h1 class="page-title">Input Pengeluaran</h1>
             <p class="page-desc">Cukup ketik nominal dan pilih pos, autopilot yang atur sisanya tanpa ribet.</p>
           </div>
           <div class="header-actions">
@@ -381,7 +354,7 @@
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4891E7" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
               <div>
                 <div class="chip-mini-label">HARI INI</div>
-                <div class="chip-mini-val">Kamis, 24 Okt 2024</div>
+                <div class="chip-mini-val" id="exp-today"></div>
               </div>
             </div>
             <div class="badge-tertiary-lg">
@@ -399,15 +372,15 @@
               </label>
               <div class="big-currency-input">
                 <span class="currency-prefix">Rp</span>
-                <input type="number" id="exp-amount" value="15000" min="500" step="500" required />
+                <input type="number" id="exp-amount" placeholder="0" min="500" step="500" required />
               </div>
               <div class="preset-row">
                 <span class="preset-label">Preset Cepat:</span>
-                <button type="button" class="preset-chip" onclick="setExpensePreset(5000, this)">+5.000</button>
-                <button type="button" class="preset-chip" onclick="setExpensePreset(10000, this)">+10.000</button>
-                <button type="button" class="preset-chip active" onclick="setExpensePreset(15000, this)">15.000 (Pas)</button>
-                <button type="button" class="preset-chip" onclick="setExpensePreset(25000, this)">+25.000</button>
-                <button type="button" class="preset-chip" onclick="setExpensePreset(50000, this)">+50.000</button>
+                <button type="button" class="preset-chip" onclick="setExpensePreset(5000, this)">5.000</button>
+                <button type="button" class="preset-chip" onclick="setExpensePreset(10000, this)">10.000</button>
+                <button type="button" class="preset-chip" onclick="setExpensePreset(15000, this)">15.000</button>
+                <button type="button" class="preset-chip" onclick="setExpensePreset(25000, this)">25.000</button>
+                <button type="button" class="preset-chip" onclick="setExpensePreset(50000, this)">50.000</button>
               </div>
             </div>
 
@@ -416,7 +389,7 @@
                 <span>📝</span> Untuk apa ini dibeli?
               </label>
               <div class="input-with-clear">
-                <input type="text" id="exp-title" value="Makan siang warteg komplit" placeholder="Contoh: Nasi uduk, bensin, print..." required />
+                <input type="text" id="exp-title" placeholder="Contoh: Nasi uduk, bensin, print..." required />
                 <button type="button" class="clear-x" onclick="document.getElementById('exp-title').value=''">✕</button>
               </div>
             </div>
@@ -426,21 +399,14 @@
                 <label class="form-label-icon"><span>🗂</span> Pilih Pos Pengeluaran</label>
                 <span class="hint-text">Pilih 1 pos</span>
               </div>
-              <div class="pos-grid" id="exp-pos-grid">
-                <button type="button" class="pos-btn active" data-cat="Makan & Minum" onclick="selectExpensePos(this)">🍴 Makan &amp; Minum</button>
-                <button type="button" class="pos-btn" data-cat="Transportasi" onclick="selectExpensePos(this)">🛵 Transportasi</button>
-                <button type="button" class="pos-btn" data-cat="Lain-lain" onclick="selectExpensePos(this)">🎓 Kuliah &amp; Tugas</button>
-                <button type="button" class="pos-btn" data-cat="Jajan & Reward" onclick="selectExpensePos(this)">☕ Jajan / Reward</button>
-                <button type="button" class="pos-btn" data-cat="Rutin Kos" onclick="selectExpensePos(this)">💼 Belanja Kos</button>
-                <button type="button" class="pos-btn" data-cat="Lain-lain" onclick="selectExpensePos(this)">••• Lain-lain</button>
-              </div>
+              <div class="pos-grid" id="exp-pos-grid"></div>
             </div>
 
             <div class="form-block">
               <label class="form-label-icon"><span>🏦</span> Sumber Dana / Cara Bayar</label>
               <div class="segmented-control">
-                <button type="button" class="seg-btn active" onclick="selectPayMethod(this, 'QRIS / GoPay')">📱 QRIS / GoPay / ShopeePay</button>
-                <button type="button" class="seg-btn" onclick="selectPayMethod(this, 'Tunai')">💵 Tunai / Dompet Fisik</button>
+                <button type="button" class="seg-btn active" onclick="selectPayMethod(this, 'bank')">📱 Bank / E-wallet</button>
+                <button type="button" class="seg-btn" onclick="selectPayMethod(this, 'tunai')">💵 Tunai</button>
               </div>
             </div>
 
@@ -469,7 +435,7 @@
               <div class="impact-box">
                 <div class="impact-top-row">
                   <span>Jatah Harian Hari Ini</span>
-                  <span class="text-primary fw-700">21 Hari Tersisa Bulan Ini</span>
+                  <span class="text-primary fw-700" id="exp-days-left"></span>
                 </div>
                 <div class="impact-numbers">
                   <div>
@@ -499,8 +465,8 @@
               <div class="vault-left">
                 <div class="vault-icon">🐷</div>
                 <div>
-                  <div class="vault-eyebrow">CADANGAN DARURAT KOS</div>
-                  <div class="vault-val">Rp 350.000</div>
+                  <div class="vault-eyebrow">DANA WAJIB TERKUNCI</div>
+                  <div class="vault-val" id="exp-vault"></div>
                 </div>
               </div>
               <span class="pill-soft-primary">Tak Tersentuh</span>
@@ -515,7 +481,7 @@
       <section id="page-uang-saku" class="page-view">
         <div class="page-header-row">
           <div>
-            <h1 class="page-title">Atur Anggaran Uang Saku Bulanan</h1>
+            <h1 class="page-title">Input Pemasukan</h1>
             <p class="page-desc">Langkah awal 2 menit agar uang sakumu autopilot sampai akhir bulan tanpa drama tanggal tua.</p>
           </div>
         </div>
@@ -527,13 +493,13 @@
               <div class="block-header-icon">
                 <div class="icon-box-soft">💵</div>
                 <div>
-                  <h3>Nominal Uang Saku Masuk</h3>
+                  <h3>Nominal Pemasukan</h3>
                   <p>Ketik jumlah kiriman orang tua atau jatah bulananmu.</p>
                 </div>
               </div>
               <div class="big-currency-input compact-currency">
                 <span class="currency-prefix">Rp</span>
-                <input type="number" id="allowance-input" value="1500000" step="50000" oninput="recalcAllowancePreview()" />
+                <input type="number" id="allowance-input" placeholder="0" step="50000" oninput="recalcAllowancePreview()" />
               </div>
               <div class="preset-row space-between">
                 <div class="preset-group">
@@ -546,29 +512,18 @@
               </div>
             </div>
 
-            <!-- Box 2: Periode & Siklus Anggaran -->
+            <!-- Box 2: Jenis Pemasukan -->
             <div class="card card-padded">
-              <div class="block-header-icon">
-                <div class="icon-box-soft">📅</div>
-                <div>
-                  <h3>Periode &amp; Siklus Anggaran</h3>
-                  <p>Tentukan seberapa sering kamu menerima jatah saku.</p>
-                </div>
+              <div class="block-header-icon"><div class="icon-box-soft">📅</div>
+                <div><h3>Jenis Pemasukan</h3><p>Bulanan = uang awal bulan. Tambahan = uang yang masuk di tengah bulan.</p></div></div>
+              <div class="form-block mt-12">
+                <select id="inc-type" class="standard-input" onchange="toggleIncType()">
+                  <option value="bulanan">Bulanan</option><option value="tambahan">Tambahan</option></select>
               </div>
-              <div class="cycle-selector-box">
-                <span>🗓 Bulanan (30–31 Hari)</span>
-              </div>
-              <div class="cycle-meta-grid">
-                <div class="cycle-meta-card">
-                  <div class="cm-label">DURASI AKTIF</div>
-                  <div class="cm-val">📅 1 Okt – 31 Okt 2024</div>
-                  <div class="cm-sub">31 hari bertahan hidup</div>
-                </div>
-                <div class="cycle-meta-card">
-                  <div class="cm-label">JADWAL KIRIMAN ULANG</div>
-                  <div class="cm-val">🔔 Tgl 1 Setiap Bulan</div>
-                  <div class="cm-sub">Sinkron dengan ortu</div>
-                </div>
+              <div class="form-block hidden" id="inc-purpose-wrap">
+                <select id="inc-purpose" class="standard-input" onchange="recalcAllowancePreview()">
+                  <option value="harian">Harian (menambah saldo, jatah dihitung ulang)</option>
+                  <option value="tabungan">Tabungan (disimpan terpisah)</option></select>
               </div>
             </div>
 
@@ -577,7 +532,7 @@
               <div class="block-header-icon">
                 <div class="icon-box-soft">🔒</div>
                 <div>
-                  <h3>Jatah Wajib Terkunci</h3>
+                  <h3>Pengeluaran Wajib Bulanan</h3>
                   <p>Dipisahkan otomatis sejak awal agar tidak terpakai di minggu pertama.</p>
                 </div>
               </div>
@@ -607,11 +562,11 @@
 
               <div class="summary-rows">
                 <div class="sum-row">
-                  <span>Total Uang Saku</span>
+                  <span>Total Pemasukan</span>
                   <strong id="prev-total-allowance">Rp 1.500.000</strong>
                 </div>
                 <div class="sum-row">
-                  <span>Pos Wajib Kosan 🔒</span>
+                  <span>Pengeluaran Wajib 🔒</span>
                   <strong class="text-danger" id="prev-locked-kos">- Rp 300.000</strong>
                 </div>
                 <div class="sum-divider"></div>
@@ -638,8 +593,9 @@
                 </p>
               </div>
 
+              <p id="inc-warn" class="auth-error hidden"></p>
               <button type="button" class="btn btn-primary btn-lg w-full mt-16" onclick="saveAllowanceSettings()">
-                Simpan Anggaran &amp; Aktifkan Autopilot
+                Simpan
               </button>
             </div>
           </div>
@@ -659,7 +615,7 @@
             <div class="icon-box-soft">📅</div>
             <div>
               <div class="chip-mini-label">Siklus Uang Saku</div>
-              <div class="chip-mini-val">24 Hari Tersisa (s/d 31 Okt)</div>
+              <div class="chip-mini-val" id="sim-days"></div>
             </div>
           </div>
         </div>
@@ -685,7 +641,7 @@
               </div>
               <div class="input-with-icon">
                 <span>🛍</span>
-                <input type="text" id="sim-item-name" value="Sepatu Sneakers Baru" oninput="updateSimulation()" />
+                <input type="text" id="sim-item-name" placeholder="Contoh: Sepatu Sneakers" oninput="updateSimulation()" />
               </div>
             </div>
 
@@ -693,53 +649,36 @@
               <label class="form-label-icon">Estimasi Harga (Rp)</label>
               <div class="big-currency-input compact-currency">
                 <span class="currency-prefix">Rp</span>
-                <input type="number" id="sim-item-price" value="150000" step="5000" oninput="updateSimulation()" />
+                <input type="number" id="sim-item-price" placeholder="0" step="5000" oninput="updateSimulation()" />
               </div>
               <div class="preset-row">
                 <span class="preset-label">Cepat:</span>
                 <button type="button" class="preset-chip" onclick="adjustSimPrice(25000, true)">+Rp 25.000</button>
                 <button type="button" class="preset-chip" onclick="adjustSimPrice(50000, true)">+Rp 50.000</button>
-                <button type="button" class="preset-chip active" onclick="adjustSimPrice(150000, false)">Rp 150.000</button>
+                <button type="button" class="preset-chip" onclick="adjustSimPrice(150000, false)">Rp 150.000</button>
                 <button type="button" class="preset-chip" onclick="adjustSimPrice(300000, false)">Rp 300.000</button>
               </div>
             </div>
 
             <div class="form-block">
               <label class="form-label-icon">Kategori Belanja</label>
-              <select id="sim-category" class="standard-input">
-                <option value="Jajan & Reward">🛍 Belanja Pribadi / Non-Rutin</option>
-                <option value="Lain-lain">📚 Kebutuhan Kuliah / Praktikum</option>
-                <option value="Makan & Minum">🍔 Kuliner / Nongkrong</option>
-              </select>
+              <select id="sim-category" class="standard-input"></select>
             </div>
 
             <div class="sim-impact-panel">
-              <div class="sim-impact-head">
-                <span>SIMULASI DAMPAK SAKU</span>
-                <span class="pill-warning-sm" id="sim-load-badge">⚠ Beban: Sedang</span>
-              </div>
-              <div class="sim-compare-grid">
-                <div class="sim-box">
-                  <div class="sim-box-label">Jatah Harian Sekarang</div>
-                  <div class="sim-box-val" id="sim-current-daily">Rp 40.000<span>/hari</span></div>
-                  <div class="sim-box-note text-secondary">Bisa makan 3x normal</div>
-                </div>
-                <div class="sim-box">
-                  <div class="sim-box-label text-secondary fw-700">Jatah Baru Jika Dibeli</div>
-                  <div class="sim-box-val" id="sim-new-daily">Rp 33.750<span>/hari</span></div>
-                  <div class="sim-box-note text-danger" id="sim-diff-note">📉 -Rp 6.250/hari (24 hari)</div>
-                </div>
-              </div>
+              <div class="sim-impact-head"><span>DAMPAK KE SAKU</span><span class="pill-warning-sm" id="sim-load-badge">—</span></div>
+              <div class="sim-compare-grid" id="sim-compare"></div>
+              <p class="hint-text" id="sim-usable" style="margin-top:10px"></p>
             </div>
 
             <div class="form-submit-row mt-16">
-              <button type="button" class="btn btn-primary btn-lg flex-1" onclick="saveToWishlist()">🕒 Tunda 48 Jam (Wishlist)</button>
-              <button type="button" class="btn btn-secondary btn-lg flex-1" onclick="buyAndAdjust()">🛒 Tetap Beli &amp; Sesuaikan</button>
+              <button type="button" class="btn btn-primary btn-lg flex-1" onclick="saveToWishlist()">🕒 Tunda Dulu</button>
+              <button type="button" id="btn-buy" class="btn btn-secondary btn-lg flex-1" onclick="buyAndAdjust()">🛒 Tetap Beli &amp; Sesuaikan</button>
             </div>
 
             <!-- Wishlist Drawer -->
             <div id="wishlist-section" class="wishlist-box hidden">
-              <div class="wishlist-title">⏳ Daftar Tunda 48 Jam (Anti-Impulsif)</div>
+              <div class="wishlist-title">⏳ Daftar Tunda</div>
               <div id="wishlist-items"></div>
             </div>
           </div>
@@ -751,25 +690,25 @@
                 <div class="icon-box-soft">📈</div>
                 <div>
                   <h3>Simulasi Kurva Saldo</h3>
-                  <p>Proyeksi uang saku sampai 31 Oktober</p>
+                  <p id="sim-proj"></p>
                 </div>
               </div>
 
               <div class="curve-cards-grid">
                 <div class="curve-mini-card">
-                  <div class="cm-tiny">Sisa Saldo Nyata</div>
+                  <div class="cm-tiny">Sisa Uang Setelah Beli</div>
                   <div class="cm-big" id="curve-real-balance">Rp 700.000</div>
-                  <div class="cm-foot">Rata-rata: Rp 50.000/hr</div>
+                  <div class="cm-foot" id="curve-avg"></div>
                 </div>
                 <div class="curve-mini-card danger-tint">
-                  <div class="cm-tiny text-danger">⚠ Tanggal Kritis</div>
+                  <div class="cm-tiny text-danger">Jatah Harian Lama</div>
                   <div class="cm-big text-danger" id="curve-critical-date">24 Oktober</div>
-                  <div class="cm-foot text-danger">Habis 7 hari sebelum kiriman</div>
+                  <div class="cm-foot text-danger" id="curve-critical-foot"></div>
                 </div>
                 <div class="curve-mini-card secondary-tint">
-                  <div class="cm-tiny text-secondary">Rekomendasi Aman</div>
+                  <div class="cm-tiny text-secondary">Jatah Harian Baru</div>
                   <div class="cm-big text-primary" id="curve-safe-rec">Rp 35.000<span>/hr</span></div>
-                  <div class="cm-foot text-secondary">Tembus sampai 31 Okt</div>
+                  <div class="cm-foot text-secondary" id="curve-new-foot"></div>
                 </div>
               </div>
 
@@ -779,17 +718,20 @@
                   <line x1="20" y1="105" x2="340" y2="105" stroke="#E2E8F0" stroke-width="1.5"/>
                   <path id="curve-safe-path" d="M 20 25 Q 180 60 340 95" fill="none" stroke="#4891E7" stroke-width="3" stroke-dasharray="5 4"/>
                   <path id="curve-impulsive-path" d="M 20 35 Q 150 75 265 105" fill="none" stroke="#042C8F" stroke-width="3.5" stroke-linecap="round"/>
-                  <circle cx="265" cy="105" r="5" fill="#DC2626"/>
-                  <text x="20" y="122" font-size="10" fill="#64748B" font-family="Plus Jakarta Sans">10 Okt</text>
-                  <text x="242" y="122" font-size="10" fill="#DC2626" font-weight="700" font-family="Plus Jakarta Sans">24 Okt (Kritis)</text>
-                  <text x="308" y="122" font-size="10" fill="#042C8F" font-weight="700" font-family="Plus Jakarta Sans">31 Okt</text>
+                  <circle id="curve-dot" cx="20" cy="105" r="5" fill="#DC2626"/>
+                  <text x="20" y="122" font-size="10" fill="#64748B" font-family="Plus Jakarta Sans" id="curve-l1"></text>
+                  <text x="242" y="122" font-size="10" fill="#DC2626" font-weight="700" font-family="Plus Jakarta Sans" id="curve-l2"></text>
+                  <text x="308" y="122" font-size="10" fill="#042C8F" font-weight="700" font-family="Plus Jakarta Sans" id="curve-l3"></text>
                 </svg>
               </div>
             </div>
 
-            <button type="button" class="btn btn-primary btn-lg w-full mt-16" onclick="applySafeDailyLimit()">
-              ↻ Terapkan Batas Harian <span id="btn-safe-limit-text">Rp 35.000</span>/hari
-            </button>
+            <p class="hint-text" id="sim-advice" style="margin-top:10px"></p>
+            <div class="form-submit-row mt-16">
+              <button type="button" id="btn-apply" class="btn btn-primary btn-lg flex-1" onclick="applySafeDailyLimit()">Terapkan</button>
+              <button type="button" class="btn btn-secondary btn-lg flex-1" onclick="cancelSim()">Tidak</button>
+            </div>
+            <button type="button" id="btn-autopilot" class="btn btn-secondary w-full mt-8 hidden" onclick="resetToAutopilot()">Kembali ke Autopilot</button>
           </div>
         </div>
       </section>
@@ -805,87 +747,16 @@
           </div>
         </div>
 
-        <!-- Card 1: Alokasi Jatah Bulanan -->
+        <!-- Card 1: Alokasi Pengeluaran Bulanan -->
         <div class="card card-padded mb-20">
           <div class="section-head-row">
-            <div class="section-title-with-icon">
-              <div class="icon-box-soft">◔</div>
-              <div>
-                <h3>Alokasi Jatah Bulanan</h3>
-                <p class="sub-xs">Otomatis dihitung ulang setiap kali kamu mengubah alokasi.</p>
-              </div>
-            </div>
-            <div class="plafon-pill">
-              <div>
-                <div class="plafon-label">Total Plafon Harian</div>
-                <div class="plafon-val" id="riwayat-plafon-val">Rp 40.000 <span>/ hari</span></div>
-              </div>
-              <div class="icon-box-soft">🔒</div>
-            </div>
+            <div class="section-title-with-icon"><div class="icon-box-soft">◔</div>
+              <div><h3>Alokasi Pengeluaran Bulanan</h3><p class="sub-xs">Diambil dari daftar pengeluaran wajib di Input Pemasukan.</p></div></div>
+            <div class="plafon-pill"><div><div class="plafon-label">Jatah Harian</div><div class="plafon-val" id="riwayat-plafon-val"></div></div><div class="icon-box-soft">🔒</div></div>
           </div>
-
-          <!-- Segmented Allocation Bar -->
-          <div class="alloc-bar-track">
-            <div class="alloc-seg-primary" id="alloc-bar-1" style="width: 70%;"></div>
-            <div class="alloc-seg-secondary" id="alloc-bar-2" style="width: 12%;"></div>
-            <div class="alloc-seg-light" id="alloc-bar-3" style="width: 18%;"></div>
-          </div>
-          <div class="alloc-legend-row">
-            <div class="alloc-legends">
-              <span><i class="dot-c-primary"></i> Makan &amp; Minum (<strong id="leg-p1">70%</strong>)</span>
-              <span><i class="dot-c-secondary"></i> Transportasi (<strong id="leg-p2">12%</strong>)</span>
-              <span><i class="dot-c-light"></i> Lain-lain &amp; Jajan (<strong id="leg-p3">18%</strong>)</span>
-            </div>
-            <span class="text-primary fw-700">Total: 100%</span>
-          </div>
-
-          <!-- 3 Allocation Cards -->
-          <div class="alloc-cards-grid">
-            <div class="alloc-item-card">
-              <h4>Iuran Kos, Sampah &amp; Keamanan</h4>
-              <div class="alloc-pct-sub"><span id="card-p1">70%</span> porsi utama</div>
-              <div class="alloc-money" id="alloc-val-1">Rp 180.000 <span>/ hari</span></div>
-              <p class="alloc-desc">Iuran untuk kos, sampah dan juga iuran keamanan</p>
-              <div class="stepper-box">
-                <span>Sesuaikan Alokasi:</span>
-                <div class="stepper-controls">
-                  <button type="button" class="step-minus" onclick="stepAllocation(0, -1000)">−</button>
-                  <strong id="step-label-1">28k</strong>
-                  <button type="button" class="step-plus" onclick="stepAllocation(0, 1000)">+</button>
-                </div>
-              </div>
-            </div>
-
-            <div class="alloc-item-card">
-              <h4>Paket Data &amp; Wifi Kos Patungan</h4>
-              <div class="alloc-pct-sub"><span id="card-p2">12%</span> mobilitas</div>
-              <div class="alloc-money" id="alloc-val-2">Rp 75.000 <span>/ hari</span></div>
-              <p class="alloc-desc">Beli paket data dan membayar iuran wifi di kos</p>
-              <div class="stepper-box">
-                <span>Sesuaikan Alokasi:</span>
-                <div class="stepper-controls">
-                  <button type="button" class="step-minus" onclick="stepAllocation(1, -1000)">−</button>
-                  <strong id="step-label-2">5k</strong>
-                  <button type="button" class="step-plus" onclick="stepAllocation(1, 1000)">+</button>
-                </div>
-              </div>
-            </div>
-
-            <div class="alloc-item-card">
-              <h4>Galon Air &amp; Gas Bersama</h4>
-              <div class="alloc-pct-sub"><span id="card-p3">18%</span> fleksibel</div>
-              <div class="alloc-money" id="alloc-val-3">Rp 45.000 <span>/ hari</span></div>
-              <p class="alloc-desc">Iuran galon air dan juga gas kos bersama</p>
-              <div class="stepper-box">
-                <span>Sesuaikan Alokasi:</span>
-                <div class="stepper-controls">
-                  <button type="button" class="step-minus" onclick="stepAllocation(2, -1000)">−</button>
-                  <strong id="step-label-3">7k</strong>
-                  <button type="button" class="step-plus" onclick="stepAllocation(2, 1000)">+</button>
-                </div>
-              </div>
-            </div>
-          </div>
+          <div class="alloc-legend-row"><div class="alloc-legends">
+            <span>Sudah dibayar: <strong id="alloc-paid"></strong></span><span>Belum dibayar: <strong id="alloc-unpaid"></strong></span></div></div>
+          <div id="alloc-list" class="mandatory-list"></div>
         </div>
 
         <!-- Card 2: Tabel Riwayat Pengeluaran Real-Time -->
@@ -900,20 +771,13 @@
                 <span>🔍</span>
                 <input type="text" id="history-search" placeholder="Cari geprek, bensin, fotokopi..." oninput="renderHistoryTable()" />
               </div>
-              <div class="date-pill-soft">📅 Bulan Ini - Oktober 2024</div>
+              <div class="date-pill-soft" id="hist-month"></div>
               <button type="button" class="btn btn-soft-primary" onclick="navigateTo('catat-pengeluaran')">+ Catat Manual</button>
             </div>
           </div>
 
           <!-- Filter Tabs -->
-          <div class="filter-pills-row" id="history-filter-tabs">
-            <button type="button" class="filter-pill active" data-cat="Semua" onclick="setHistoryFilter('Semua', this)">Semua (6)</button>
-            <button type="button" class="filter-pill" data-cat="Makan & Minum" onclick="setHistoryFilter('Makan & Minum', this)">Makan &amp; Minum</button>
-            <button type="button" class="filter-pill" data-cat="Transportasi" onclick="setHistoryFilter('Transportasi', this)">Transportasi</button>
-            <button type="button" class="filter-pill" data-cat="Lain-lain" onclick="setHistoryFilter('Lain-lain', this)">Lain-lain</button>
-            <button type="button" class="filter-pill" data-cat="Rutin Kos" onclick="setHistoryFilter('Rutin Kos', this)">Rutin Kos</button>
-            <button type="button" class="filter-pill" data-cat="Jajan & Reward" onclick="setHistoryFilter('Jajan & Reward', this)">Jajan &amp; Reward</button>
-          </div>
+          <div class="filter-pills-row" id="history-filter-tabs"></div>
 
           <!-- Responsive Table -->
           <div class="table-responsive">
@@ -936,7 +800,7 @@
           <div class="table-summary-footer">
             <div>
               <div class="tsf-title">Total Pengeluaran Bulan Ini: <span id="riwayat-month-total">Rp 324.000</span></div>
-              <div class="tsf-sub">78% di bawah target akumulatif tanggal 10. Kondisi dompet sangat sehat!</div>
+              <div class="tsf-sub" id="tsf-sub"></div>
             </div>
             <div class="tsf-right">
               <div class="sisa-pill">Sisa Uang Bulan Ini: <strong id="riwayat-month-left">Rp 876.000</strong></div>
@@ -1023,12 +887,35 @@
           </div>
         </div>
       </section>
+      <section id="page-profil" class="page-view">
+        <div class="page-header-row"><div><h1 class="page-title">Profil</h1><p class="page-desc">Kelola data akunmu.</p></div></div>
+        <form id="profile-form" class="card card-padded" style="max-width:520px">
+          <div class="form-block profile-photo-block">
+            <div class="profile-photo-preview"><img id="prof-photo-img" alt="Foto profil" /></div>
+            <div class="profile-photo-actions">
+              <input type="file" id="prof-photo-input" accept="image/*" hidden />
+              <div class="profile-photo-btns">
+                <button type="button" class="btn btn-secondary" onclick="document.getElementById('prof-photo-input').click()">Unggah Foto</button>
+                <button type="button" id="prof-photo-remove" class="btn btn-outlined-sm hidden" onclick="removeProfilePhoto()">Hapus Foto</button>
+              </div>
+              <span class="hint-text">JPG atau PNG, maksimal 5 MB.</span>
+            </div>
+          </div>
+          <div class="form-block"><label class="form-label-icon">Nama lengkap</label><input type="text" id="prof-name" class="standard-input" required /></div>
+          <div class="form-block"><label class="form-label-icon">Email</label><input type="email" id="prof-email" class="standard-input" required /></div>
+          <div class="form-block"><label class="form-label-icon">Nomor handphone</label><input type="tel" id="prof-wa" class="standard-input" required /></div>
+          <p id="prof-error" class="auth-error hidden"></p>
+          <div class="form-submit-row">
+            <button type="submit" class="btn btn-primary btn-lg flex-1">Simpan Perubahan</button>
+            <button type="button" class="btn btn-secondary btn-lg" onclick="navigateTo('beranda')">Batal</button>
+          </div>
+        </form>
+      </section>
     </main>
   </div>
 
   <!-- TOAST NOTIFICATION -->
   <div id="toast" class="toast hidden"></div>
-
   <script src="script.js"></script>
 </body>
 </html>
